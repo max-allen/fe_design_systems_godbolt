@@ -82,7 +82,9 @@ A website page is a relic of the past. We are no longer building pages. We are b
 
 > A design system is the programmatic representation of a website's visual language. The visual language, created by our designers, is an artifact that expresses how the website visually communicates its message to users. It is a collection of colors, fonts, buttons, image styles, typographical rhythms, and UI patterns used to convey mood, meaning, and intent.
 
-Spoken language can be broken down into nouns, verbs, adjectives. As FE devs we must deconstruct the visual language into its smallest pieces. By doing this, we can create rules about how to put it back together again.
+Spoken language can be broken down into nouns, verbs, adjectives. As FE devs we must deconstruct the visual language into its smallest pieces. By doing this, we can create rules about how to put it back together again. 
+
+We need to decide how the design system will be attached to our markup.
 
 The Many Faces of Modular CSS Methodologies
 
@@ -161,4 +163,5 @@ dash (`toggle_details--active`). Unlike OOCSS or SMACSS, every class fully descr
 No `open` or `is-active` classes. Those classes make sense in their context, but without that context meaning
 is lost. When we the class `toggle__details--active`, we know exactly what it means.
 
-Choose a solution that works for you.
+Choose a solution that works for you. Beware of what's come prior, be able to articulate _why_ an approach will solve
+the problems your project faces, and commit to an approach.
