@@ -82,7 +82,7 @@ A website page is a relic of the past. We are no longer building pages. We are b
 
 > A design system is the programmatic representation of a website's visual language. The visual language, created by our designers, is an artifact that expresses how the website visually communicates its message to users. It is a collection of colors, fonts, buttons, image styles, typographical rhythms, and UI patterns used to convey mood, meaning, and intent.
 
-Spoken language can be broken down into nouns, verbs, adjectives. As FE devs we must deconstruct the visual language into its smallest pieces. By doing this, we can create rules about how to put it back together again. 
+Spoken language can be broken down into nouns, verbs, adjectives. As FE devs we must deconstruct the visual language into its smallest pieces. By doing this, we can create rules about how to put it back together again. The goal of the conversion is to create a scalable and maintainable codebase that faithfully reproduces anything the language is able to express.
 
 We need to decide how the design system will be attached to our markup.
 
