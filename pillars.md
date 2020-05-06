@@ -107,3 +107,58 @@ Two main principles are separating structure from skin and separating container 
   * _Separating container from content_ means not using location as a style quantifier. instead of styling tags inside a container, create reusuable classes that will apply the required text treatment regardless of the element it's used on. This way you can leverage default styles if no class is applied.
 
 This approach is useful if you want to provide developers a set of components they can mix and match to create UIs. An example of this in practice is Bootstrap. A system of objects adorned with various skins. Goal of Bootstrap is to create a complete system capable of creating any UI a developer may need to put together.
+
+* [Scalable and Modular Architecture for CSS (SMACSS)](http://smacss.com/)
+
+```html
+<div class="toggle toggle-simple">
+  <div class="toggle-control is-active">
+    <h2 class="toggle-title">Title 1</h2>
+  </div>
+
+  <div class="toggle-details is-active">
+    ...
+  </div>
+  ...
+</dl>
+```
+
+SMACSS is similar to OOCSS, but breaks down system of styles into 5 categories:
+
+* Base – How markup would look without classes
+* Layout – Dividing pages into regions
+* Module – Modular, reusuable parts of design
+* State – Describes how modules / layouts would look under given states or contexts
+* Theme – Optional visual layer that lets you swap themes
+
+Combination of module styles (toggle, toggle-title, toggle-details), submodule (toggle-simple), and state (is-active). 
+
+OOCSS and SMACCS are similar. Both scope styles to a root level class, apply modifications via skin (OOCSS) or submodule (SMACSS).
+
+* Block Element Modifier (BEM) Approach:
+
+```html
+<div class="toggle toggle--simple">
+  <div class="toggle__control toggle__control--active">
+    <h2 class="toggle__title">Title 1</h2>
+  </div>
+
+  <div class="toggle__details toggle__details--active">
+    ...
+  </div>
+  ...
+</dl>
+```
+
+BEM is simply a class naming convention. It doesn't dictate the structure of CSS, but suggests every element is labeled with a class that describes:
+
+* Block – Name of the parent component.
+* Element – Name of element inside of the block.
+* Modifier – Any modifier associated with the block or element.
+
+Elements are added after a double underscore (`toggle_details`) and modifiers are added after a double
+dash (`toggle_details--active`). Unlike OOCSS or SMACSS, every class fully describes what it accomplishes.
+No `open` or `is-active` classes. Those classes make sense in their context, but without that context meaning
+is lost. When we the class `toggle__details--active`, we know exactly what it means.
+
+Choose a solution that works for you.
